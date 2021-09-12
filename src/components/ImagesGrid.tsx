@@ -6,10 +6,10 @@ type Props = {
   count: number;
 };
 
-const ImagesGrid: Component<Props> = ({ count }) => {
+const ImagesGrid: Component<Props> = (props) => {
   return (
     <div class="grid gap-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-      <Index each={[...Array(count)]}>
+      <Index each={[...Array(props.count)]}>
         {(_, index) => (
           <ImageCard
             src={`https://picsum.photos/480/480.webp?random=${index}`}

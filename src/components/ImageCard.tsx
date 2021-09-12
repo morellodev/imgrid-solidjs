@@ -5,7 +5,7 @@ type Props = {
   srcSet: string;
 };
 
-const ImageCard: Component<Props> = ({ src, srcSet }) => {
+const ImageCard: Component<Props> = (props) => {
   const [imageLoaded, setImageLoaded] = createSignal(false);
 
   return (
@@ -20,8 +20,8 @@ const ImageCard: Component<Props> = ({ src, srcSet }) => {
           "opacity-100": imageLoaded(),
         }}
         loading="lazy"
-        src={src}
-        srcSet={srcSet}
+        src={props.src}
+        srcSet={props.srcSet}
         onLoad={() => setImageLoaded(true)}
       />
     </div>
