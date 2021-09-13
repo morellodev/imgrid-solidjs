@@ -2,6 +2,8 @@ import { Component, createSignal, JSX } from "solid-js";
 
 type Props = {
   src: string;
+  width: number;
+  height: number;
   srcSet?: string;
   style?: JSX.CSSProperties;
 };
@@ -24,6 +26,8 @@ const LazyImage: Component<Props> = (props) => {
         loading="lazy"
         src={props.src}
         srcSet={props.srcSet}
+        width={props.width}
+        height={props.height}
         onLoad={() => setImageLoaded(true)}
       />
     </div>
