@@ -21,6 +21,7 @@ const ImagesGrid: Component<Props> = (props) => {
 
           return (
             <LazyImage
+              alt={`Image #${index}`}
               src={responsiveVariants()[0]}
               srcSet={responsiveVariants().join(", ")}
               width={(baseImageHeight * props.aspectRatio) | 0}

@@ -1,6 +1,7 @@
 import { Component, createSignal, JSX } from "solid-js";
 
 type Props = {
+  alt: string;
   src: string;
   width: number;
   height: number;
@@ -18,6 +19,7 @@ const LazyImage: Component<Props> = (props) => {
       style={props.style}
     >
       <img
+        alt={props.alt}
         class="w-full object-cover transition-opacity"
         classList={{
           "opacity-0": !imageLoaded(),
