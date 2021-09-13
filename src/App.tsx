@@ -8,7 +8,7 @@ export default function App() {
         <h1 class="text-4xl font-bold text-center">imgrid</h1>
       </header>
       <main>
-        <ImagesGrid count={60} />
+        <ImagesGrid aspectRatio={1} count={60} />
       </main>
       <footer class="my-8">
         <p class="text-center text-gray-500">

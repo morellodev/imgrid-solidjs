@@ -9,14 +9,14 @@
     "serve": "vite preview"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "@types/lodash": "^4.14.172",
     "autoprefixer": "^10.3.4",
+    "lodash": "^4.17.21",
     "postcss": "^8.3.6",
+    "solid-js": "^1.1.3",
     "tailwindcss": "^2.2.15",
     "vite": "^2.5.6",
     "vite-plugin-solid": "^2.0.3"
-  },
-  "dependencies": {
-    "solid-js": "^1.1.3"
   }
 }

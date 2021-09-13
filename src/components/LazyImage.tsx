@@ -1,17 +1,19 @@
-import { Component, createSignal } from "solid-js";
+import { Component, createSignal, JSX } from "solid-js";
 
 type Props = {
   src: string;
-  srcSet: string;
+  srcSet?: string;
+  style?: JSX.CSSProperties;
 };
 
-const ImageCard: Component<Props> = (props) => {
+const LazyImage: Component<Props> = (props) => {
   const [imageLoaded, setImageLoaded] = createSignal(false);
 
   return (
     <div
-      class="w-full bg-gray-100 rounded overflow-hidden"
-      style={{ "aspect-ratio": 1 }}
+      class="bg-gray-100 rounded overflow-hidden"
+      classList={{ "animate-pulse": !imageLoaded() }}
+      style={props.style}
     >
       <img
         class="w-full object-cover transition-opacity"
@@ -28,4 +30,4 @@ const ImageCard: Component<Props> = (props) => {
   );
 };
 
-export default ImageCard;
+export default LazyImage;
