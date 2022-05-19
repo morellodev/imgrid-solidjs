@@ -1,7 +1,6 @@
 import { Component, createMemo, Index } from "solid-js";
-
-import LazyImage from "./LazyImage";
 import { getResponsiveVariants } from "../utils/images";
+import LazyImage from "./LazyImage";
 
 type Props = {
   aspectRatio: number;
